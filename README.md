@@ -19,14 +19,14 @@
 
 ## 概要
 
-- 学術図書出版社から刊行されている書籍『実践 マーケティングデータサイエンス』内で使用されているサンプルプログラム等を格納したリポジトリです．
+- 学術図書出版社から刊行されている書籍『実践 マーケティングデータサイエンス』内で使用されているサンプルプログラム等を格納した**GitHubリポジトリ**です．
 - 本書の詳細は，[本書のサポートページ](https://www.gakujutsu.co.jp/text/isbn978-4-7806-1051-2/)も合わせてご覧ください．
 
 ## ダウンロード方法
 
-1. リポジトリのURL([https://github.com/laplaciannin102/jissen-marketing](https://github.com/laplaciannin102/jissen-marketing))にアクセスします．
+1. GitHubリポジトリのURL([https://github.com/laplaciannin102/jissen-marketing](https://github.com/laplaciannin102/jissen-marketing))にアクセスします．
 
-2. 次の「方法1」または「方法2」でリポジトリ内のプログラム・データを取得します．
+2. 次の`git clone`を使う「方法1」または**Download**する「方法2」でリポジトリ内のプログラム・データを取得します．
 
    - 方法1: 以下のコマンドを実行し，`git clone`を行います．
      - ※Gitのインストールが必要です
@@ -35,7 +35,16 @@
     git clone https://github.com/laplaciannin102/jissen-marketing.git
     ```
 
-   - 方法2: 「Download ZIP」をクリックします．
+   - 方法2:
+     - 2-1. リポジトリページの右上の **「<>Code」** というボタンをクリックします．
+
+      <img width="300" alt="git_download_001" src="./999_assets/img/git_download_001.png">
+
+     - 2-2. **「Download ZIP」** をクリックします．
+
+      <img width="250" alt="git_download_002" src="./999_assets/img/git_download_002.png">
+    
+     - 2-3. zipファイル(圧縮ファイル)のダウンロードが開始されます．ダウンロードしたファイルを解凍して使用します．
 
 ## ディレクトリ構成
 
