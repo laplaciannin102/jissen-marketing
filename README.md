@@ -26,7 +26,7 @@
 
 1. GitHubリポジトリのURL([https://github.com/laplaciannin102/jissen-marketing](https://github.com/laplaciannin102/jissen-marketing))にアクセスします．
 
-2. 次の`git clone`を使う「方法1」または**Download**する「方法2」でリポジトリ内のプログラム・データを取得します．
+2. 次の`git clone`を使う「方法1」または**zipファイルをダウンロード**する「方法2」でリポジトリ内のプログラム・データを取得します．
 
    - 方法1: 以下のコマンドを実行し，`git clone`を行います．
      - ※Gitのインストールが必要です
@@ -38,11 +38,13 @@
    - 方法2:
      - 2-1. リポジトリページの右上の **「<>Code」** というボタンをクリックします．
 
-      <img width="300" alt="git_download_001" src="./999_assets/img/git_download_001.png">
+      <img width="450" alt="git_download_001" src="./999_assets/img/git_download_001.png">
+      <br>
 
      - 2-2. **「Download ZIP」** をクリックします．
 
-      <img width="250" alt="git_download_002" src="./999_assets/img/git_download_002.png">
+      <img width="300" alt="git_download_002" src="./999_assets/img/git_download_002.png">
+      <br>
     
      - 2-3. zipファイル(圧縮ファイル)のダウンロードが開始されます．ダウンロードしたファイルを解凍して使用します．
 
