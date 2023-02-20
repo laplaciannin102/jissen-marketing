@@ -14738,7 +14738,7 @@ Name: pred_buy_flag, dtype: int64</pre>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 前処理済み中間データのdictを読み取る</span>
-<span class="n">pp_data_dict</span> <span class="o">=</span> <span class="n">joblib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;../intermediate/pp_data_dict.pkl3&quot;</span><span class="p">)</span>
+<span class="n">pp_data_dict</span> <span class="o">=</span> <span class="n">joblib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;../intermediate/pp_data_dict_pkl.pkl3&quot;</span><span class="p">)</span>
 <span class="c1"># 辞書型変数の値に格納された決定木向け中間データを読み取る</span>
 <span class="n">dtc_train_df</span> <span class="o">=</span> <span class="n">pp_data_dict</span><span class="p">[</span><span class="s2">&quot;dtc&quot;</span><span class="p">][</span><span class="s2">&quot;train&quot;</span><span class="p">]</span>
 <span class="n">dtc_test_df</span> <span class="o">=</span> <span class="n">pp_data_dict</span><span class="p">[</span><span class="s2">&quot;dtc&quot;</span><span class="p">][</span><span class="s2">&quot;test&quot;</span><span class="p">]</span>
@@ -15040,9 +15040,9 @@ Name: pred_buy_flag, dtype: int64</pre>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre><span class="ansi-green-fg">[I 2023-01-12 19:19:09,563]</span> A new study created in memory with name: no-name-cbad015c-77e7-43f7-a123-9c9bd6786483
-feature_fraction, val_score: 0.625252:  14%|######4                                      | 1/7 [00:00&lt;00:01,  5.17it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:09,771]</span> Trial 0 finished with value: 0.6252519057215457 and parameters: {&#39;feature_fraction&#39;: 0.8999999999999999}. Best is trial 0 with value: 0.6252519057215457.
-feature_fraction, val_score: 0.625252:  14%|######4                                      | 1/7 [00:00&lt;00:01,  5.17it/s]</pre>
+<pre><span class="ansi-green-fg">[I 2023-02-20 16:20:28,153]</span> A new study created in memory with name: no-name-4623c09e-d904-4677-a500-d3bcdb6a5e0b
+feature_fraction, val_score: 0.626040:  14%|######4                                      | 1/7 [00:00&lt;00:01,  5.17it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:28,354]</span> Trial 0 finished with value: 0.6260404801542101 and parameters: {&#39;feature_fraction&#39;: 0.7}. Best is trial 0 with value: 0.6260404801542101.
+feature_fraction, val_score: 0.626040:  14%|######4                                      | 1/7 [00:00&lt;00:01,  5.17it/s]</pre>
 </div>
 </div>
 
@@ -15053,42 +15053,12 @@ feature_fraction, val_score: 0.625252:  14%|######4                             
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[20]	valid_0&#39;s auc: 0.615183
-[40]	valid_0&#39;s auc: 0.619557
-[60]	valid_0&#39;s auc: 0.621346
-[80]	valid_0&#39;s auc: 0.619666
-[100]	valid_0&#39;s auc: 0.625252
-[20]	valid_0&#39;s auc: 0.636818
+<pre>[20]	valid_0&#39;s auc: 0.636818
 [40]	valid_0&#39;s auc: 0.627935
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>feature_fraction, val_score: 0.626040:  29%|############8                                | 2/7 [00:00&lt;00:00,  5.31it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:09,957]</span> Trial 1 finished with value: 0.6260404801542101 and parameters: {&#39;feature_fraction&#39;: 0.7}. Best is trial 1 with value: 0.6260404801542101.
-feature_fraction, val_score: 0.626040:  29%|############8                                | 2/7 [00:00&lt;00:00,  5.31it/s]</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[60]	valid_0&#39;s auc: 0.62872
+[60]	valid_0&#39;s auc: 0.62872
 [80]	valid_0&#39;s auc: 0.628319
 [100]	valid_0&#39;s auc: 0.62604
 [20]	valid_0&#39;s auc: 0.627866
-[40]	valid_0&#39;s auc: 0.620458
-[60]	valid_0&#39;s auc: 0.624715
 </pre>
 </div>
 </div>
@@ -15100,8 +15070,8 @@ feature_fraction, val_score: 0.626040:  29%|############8                       
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>feature_fraction, val_score: 0.626040:  43%|###################2                         | 3/7 [00:00&lt;00:00,  5.13it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:10,159]</span> Trial 2 finished with value: 0.6222582435234674 and parameters: {&#39;feature_fraction&#39;: 0.8}. Best is trial 1 with value: 0.6260404801542101.
-feature_fraction, val_score: 0.626040:  43%|###################2                         | 3/7 [00:00&lt;00:00,  5.13it/s]</pre>
+<pre>feature_fraction, val_score: 0.626040:  29%|############8                                | 2/7 [00:00&lt;00:00,  5.17it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:28,548]</span> Trial 1 finished with value: 0.6222582435234674 and parameters: {&#39;feature_fraction&#39;: 0.8}. Best is trial 0 with value: 0.6260404801542101.
+feature_fraction, val_score: 0.626040:  29%|############8                                | 2/7 [00:00&lt;00:00,  5.17it/s]</pre>
 </div>
 </div>
 
@@ -15112,72 +15082,127 @@ feature_fraction, val_score: 0.626040:  43%|###################2                
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[80]	valid_0&#39;s auc: 0.625851
+<pre>[40]	valid_0&#39;s auc: 0.620458
+[60]	valid_0&#39;s auc: 0.624715
+[80]	valid_0&#39;s auc: 0.625851
 [100]	valid_0&#39;s auc: 0.622258
+[20]	valid_0&#39;s auc: 0.634872
+[40]	valid_0&#39;s auc: 0.625796
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>feature_fraction, val_score: 0.626040:  43%|###################2                         | 3/7 [00:00&lt;00:00,  5.10it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:28,748]</span> Trial 2 finished with value: 0.6196917258097491 and parameters: {&#39;feature_fraction&#39;: 1.0}. Best is trial 0 with value: 0.6260404801542101.
+feature_fraction, val_score: 0.626040:  43%|###################2                         | 3/7 [00:00&lt;00:00,  5.10it/s]</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[60]	valid_0&#39;s auc: 0.62132
+[80]	valid_0&#39;s auc: 0.616917
+[100]	valid_0&#39;s auc: 0.619692
+[20]	valid_0&#39;s auc: 0.660657
+[40]	valid_0&#39;s auc: 0.653677
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>feature_fraction, val_score: 0.626537:  57%|#########################7                   | 4/7 [00:00&lt;00:00,  4.80it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:28,974]</span> Trial 3 finished with value: 0.6265369899821841 and parameters: {&#39;feature_fraction&#39;: 0.4}. Best is trial 3 with value: 0.6265369899821841.
+feature_fraction, val_score: 0.626537:  57%|#########################7                   | 4/7 [00:00&lt;00:00,  4.80it/s]</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[60]	valid_0&#39;s auc: 0.645667
+[80]	valid_0&#39;s auc: 0.634707
+[100]	valid_0&#39;s auc: 0.626537
+[20]	valid_0&#39;s auc: 0.615183
+[40]	valid_0&#39;s auc: 0.619557
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>feature_fraction, val_score: 0.626537:  71%|################################1            | 5/7 [00:01&lt;00:00,  4.80it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:29,183]</span> Trial 4 finished with value: 0.6252519057215457 and parameters: {&#39;feature_fraction&#39;: 0.8999999999999999}. Best is trial 3 with value: 0.6265369899821841.
+feature_fraction, val_score: 0.626537:  71%|################################1            | 5/7 [00:01&lt;00:00,  4.80it/s]</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[60]	valid_0&#39;s auc: 0.621346
+[80]	valid_0&#39;s auc: 0.619666
+[100]	valid_0&#39;s auc: 0.625252
 [20]	valid_0&#39;s auc: 0.652691
 [40]	valid_0&#39;s auc: 0.640023
 [60]	valid_0&#39;s auc: 0.637117
-[80]	valid_0&#39;s auc: 0.634204
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>feature_fraction, val_score: 0.627676:  86%|######################################5      | 6/7 [00:01&lt;00:00,  4.96it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:29,372]</span> Trial 5 finished with value: 0.6276760419404772 and parameters: {&#39;feature_fraction&#39;: 0.5}. Best is trial 5 with value: 0.6276760419404772.
+feature_fraction, val_score: 0.627676:  86%|######################################5      | 6/7 [00:01&lt;00:00,  4.96it/s]</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[80]	valid_0&#39;s auc: 0.634204
 [100]	valid_0&#39;s auc: 0.627676
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>feature_fraction, val_score: 0.627676:  57%|#########################7                   | 4/7 [00:00&lt;00:00,  5.34it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:10,334]</span> Trial 3 finished with value: 0.6276760419404772 and parameters: {&#39;feature_fraction&#39;: 0.5}. Best is trial 3 with value: 0.6276760419404772.
-feature_fraction, val_score: 0.627676:  71%|################################1            | 5/7 [00:00&lt;00:00,  5.59it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:10,498]</span> Trial 4 finished with value: 0.6265369899821841 and parameters: {&#39;feature_fraction&#39;: 0.4}. Best is trial 3 with value: 0.6276760419404772.
-feature_fraction, val_score: 0.627676:  71%|################################1            | 5/7 [00:00&lt;00:00,  5.59it/s]</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[20]	valid_0&#39;s auc: 0.660657
-[40]	valid_0&#39;s auc: 0.653677
-[60]	valid_0&#39;s auc: 0.645667
-[80]	valid_0&#39;s auc: 0.634707
-[100]	valid_0&#39;s auc: 0.626537
-[20]	valid_0&#39;s auc: 0.634872
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>feature_fraction, val_score: 0.627676:  86%|######################################5      | 6/7 [00:01&lt;00:00,  5.40it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:10,697]</span> Trial 5 finished with value: 0.6196917258097491 and parameters: {&#39;feature_fraction&#39;: 1.0}. Best is trial 3 with value: 0.6276760419404772.
-feature_fraction, val_score: 0.627676:  86%|######################################5      | 6/7 [00:01&lt;00:00,  5.40it/s]</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[40]	valid_0&#39;s auc: 0.625796
-[60]	valid_0&#39;s auc: 0.62132
-[80]	valid_0&#39;s auc: 0.616917
-[100]	valid_0&#39;s auc: 0.619692
 [20]	valid_0&#39;s auc: 0.626862
 [40]	valid_0&#39;s auc: 0.640301
+[60]	valid_0&#39;s auc: 0.633576
+[80]	valid_0&#39;s auc: 0.633357
+[100]	valid_0&#39;s auc: 0.633116
 </pre>
 </div>
 </div>
@@ -15189,9 +15214,10 @@ feature_fraction, val_score: 0.627676:  86%|####################################
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>feature_fraction, val_score: 0.633116: 100%|#############################################| 7/7 [00:01&lt;00:00,  5.44it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:10,877]</span> Trial 6 finished with value: 0.6331157452028389 and parameters: {&#39;feature_fraction&#39;: 0.6}. Best is trial 6 with value: 0.6331157452028389.
-feature_fraction, val_score: 0.633116: 100%|#############################################| 7/7 [00:01&lt;00:00,  5.38it/s]
-num_leaves, val_score: 0.633116:   0%|                                                          | 0/20 [00:00&lt;?, ?it/s]</pre>
+<pre>feature_fraction, val_score: 0.633116: 100%|#############################################| 7/7 [00:01&lt;00:00,  5.10it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:29,556]</span> Trial 6 finished with value: 0.6331157452028389 and parameters: {&#39;feature_fraction&#39;: 0.6}. Best is trial 6 with value: 0.6331157452028389.
+feature_fraction, val_score: 0.633116: 100%|#############################################| 7/7 [00:01&lt;00:00,  5.00it/s]
+num_leaves, val_score: 0.634554:   5%|##5                                               | 1/20 [00:00&lt;00:02,  6.73it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:29,716]</span> Trial 7 finished with value: 0.6345541633809398 and parameters: {&#39;num_leaves&#39;: 24}. Best is trial 7 with value: 0.6345541633809398.
+num_leaves, val_score: 0.634554:   5%|##5                                               | 1/20 [00:00&lt;00:02,  6.73it/s]</pre>
 </div>
 </div>
 
@@ -15202,40 +15228,13 @@ num_leaves, val_score: 0.633116:   0%|                                          
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[60]	valid_0&#39;s auc: 0.633576
-[80]	valid_0&#39;s auc: 0.633357
-[100]	valid_0&#39;s auc: 0.633116
-[20]	valid_0&#39;s auc: 0.633678
+<pre>[20]	valid_0&#39;s auc: 0.633678
 [40]	valid_0&#39;s auc: 0.641969
 [60]	valid_0&#39;s auc: 0.63106
 [80]	valid_0&#39;s auc: 0.629965
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>num_leaves, val_score: 0.634554:   5%|##5                                               | 1/20 [00:00&lt;00:02,  6.60it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:11,035]</span> Trial 7 finished with value: 0.6345541633809398 and parameters: {&#39;num_leaves&#39;: 24}. Best is trial 7 with value: 0.6345541633809398.
-num_leaves, val_score: 0.634554:   5%|##5                                               | 1/20 [00:00&lt;00:02,  6.60it/s]</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[100]	valid_0&#39;s auc: 0.634554
+[100]	valid_0&#39;s auc: 0.634554
 [20]	valid_0&#39;s auc: 0.628322
 [40]	valid_0&#39;s auc: 0.634649
-[60]	valid_0&#39;s auc: 0.63646
 </pre>
 </div>
 </div>
@@ -15247,8 +15246,8 @@ num_leaves, val_score: 0.634554:   5%|##5                                       
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>num_leaves, val_score: 0.634554:  10%|#####                                             | 2/20 [00:00&lt;00:03,  4.55it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:11,303]</span> Trial 8 finished with value: 0.6276541370951254 and parameters: {&#39;num_leaves&#39;: 60}. Best is trial 7 with value: 0.6345541633809398.
-num_leaves, val_score: 0.634554:  10%|#####                                             | 2/20 [00:00&lt;00:03,  4.55it/s]</pre>
+<pre>num_leaves, val_score: 0.634554:  10%|#####                                             | 2/20 [00:00&lt;00:03,  4.58it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:29,984]</span> Trial 8 finished with value: 0.6276541370951254 and parameters: {&#39;num_leaves&#39;: 60}. Best is trial 7 with value: 0.6345541633809398.
+num_leaves, val_score: 0.634554:  10%|#####                                             | 2/20 [00:00&lt;00:03,  4.58it/s]</pre>
 </div>
 </div>
 
@@ -15259,7 +15258,8 @@ num_leaves, val_score: 0.634554:  10%|#####                                     
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[80]	valid_0&#39;s auc: 0.632948
+<pre>[60]	valid_0&#39;s auc: 0.63646
+[80]	valid_0&#39;s auc: 0.632948
 [100]	valid_0&#39;s auc: 0.627654
 [20]	valid_0&#39;s auc: 0.618691
 </pre>
@@ -15273,7 +15273,7 @@ num_leaves, val_score: 0.634554:  10%|#####                                     
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>num_leaves, val_score: 0.634554:  10%|#####                                             | 2/20 [00:00&lt;00:03,  4.55it/s]</pre>
+<pre>num_leaves, val_score: 0.634554:  10%|#####                                             | 2/20 [00:00&lt;00:03,  4.58it/s]</pre>
 </div>
 </div>
 
@@ -15299,8 +15299,8 @@ num_leaves, val_score: 0.634554:  10%|#####                                     
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>num_leaves, val_score: 0.634554:  15%|#######5                                          | 3/20 [00:00&lt;00:04,  3.64it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:11,643]</span> Trial 9 finished with value: 0.612788048716376 and parameters: {&#39;num_leaves&#39;: 106}. Best is trial 7 with value: 0.6345541633809398.
-num_leaves, val_score: 0.634554:  15%|#######5                                          | 3/20 [00:00&lt;00:04,  3.64it/s]</pre>
+<pre>num_leaves, val_score: 0.634554:  15%|#######5                                          | 3/20 [00:00&lt;00:04,  3.68it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:30,319]</span> Trial 9 finished with value: 0.612788048716376 and parameters: {&#39;num_leaves&#39;: 106}. Best is trial 7 with value: 0.6345541633809398.
+num_leaves, val_score: 0.634554:  15%|#######5                                          | 3/20 [00:00&lt;00:04,  3.68it/s]</pre>
 </div>
 </div>
 
@@ -15315,7 +15315,6 @@ num_leaves, val_score: 0.634554:  15%|#######5                                  
 [40]	valid_0&#39;s auc: 0.617563
 [60]	valid_0&#39;s auc: 0.617169
 [80]	valid_0&#39;s auc: 0.61519
-[100]	valid_0&#39;s auc: 0.61649
 </pre>
 </div>
 </div>
@@ -15327,7 +15326,7 @@ num_leaves, val_score: 0.634554:  15%|#######5                                  
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>num_leaves, val_score: 0.634554:  20%|##########                                        | 4/20 [00:01&lt;00:04,  3.44it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:11,958]</span> Trial 10 finished with value: 0.6164899675808289 and parameters: {&#39;num_leaves&#39;: 81}. Best is trial 7 with value: 0.6345541633809398.
+<pre>num_leaves, val_score: 0.634554:  20%|##########                                        | 4/20 [00:01&lt;00:04,  3.44it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:30,638]</span> Trial 10 finished with value: 0.6164899675808289 and parameters: {&#39;num_leaves&#39;: 81}. Best is trial 7 with value: 0.6345541633809398.
 num_leaves, val_score: 0.634554:  20%|##########                                        | 4/20 [00:01&lt;00:04,  3.44it/s]</pre>
 </div>
 </div>
@@ -15339,34 +15338,7 @@ num_leaves, val_score: 0.634554:  20%|##########                                
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[20]	valid_0&#39;s auc: 0.618691
-[40]	valid_0&#39;s auc: 0.617527
-[60]	valid_0&#39;s auc: 0.619126
-[80]	valid_0&#39;s auc: 0.618067
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>num_leaves, val_score: 0.634554:  25%|############5                                     | 5/20 [00:01&lt;00:04,  3.37it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:12,266]</span> Trial 11 finished with value: 0.612788048716376 and parameters: {&#39;num_leaves&#39;: 146}. Best is trial 7 with value: 0.6345541633809398.
-num_leaves, val_score: 0.634554:  25%|############5                                     | 5/20 [00:01&lt;00:04,  3.37it/s]</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[100]	valid_0&#39;s auc: 0.612788
+<pre>[100]	valid_0&#39;s auc: 0.61649
 [20]	valid_0&#39;s auc: 0.618691
 [40]	valid_0&#39;s auc: 0.617527
 [60]	valid_0&#39;s auc: 0.619126
@@ -15381,8 +15353,8 @@ num_leaves, val_score: 0.634554:  25%|############5                             
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>num_leaves, val_score: 0.634554:  30%|###############                                   | 6/20 [00:01&lt;00:04,  3.31it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:12,581]</span> Trial 12 finished with value: 0.612788048716376 and parameters: {&#39;num_leaves&#39;: 140}. Best is trial 7 with value: 0.6345541633809398.
-num_leaves, val_score: 0.634554:  30%|###############                                   | 6/20 [00:01&lt;00:04,  3.31it/s]</pre>
+<pre>num_leaves, val_score: 0.634554:  25%|############5                                     | 5/20 [00:01&lt;00:04,  3.32it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:30,958]</span> Trial 11 finished with value: 0.612788048716376 and parameters: {&#39;num_leaves&#39;: 146}. Best is trial 7 with value: 0.6345541633809398.
+num_leaves, val_score: 0.634554:  25%|############5                                     | 5/20 [00:01&lt;00:04,  3.32it/s]</pre>
 </div>
 </div>
 
@@ -15397,6 +15369,56 @@ num_leaves, val_score: 0.634554:  30%|###############                           
 [100]	valid_0&#39;s auc: 0.612788
 [20]	valid_0&#39;s auc: 0.618691
 [40]	valid_0&#39;s auc: 0.617527
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>num_leaves, val_score: 0.634554:  30%|###############                                   | 6/20 [00:01&lt;00:04,  3.22it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:31,287]</span> Trial 12 finished with value: 0.612788048716376 and parameters: {&#39;num_leaves&#39;: 140}. Best is trial 7 with value: 0.6345541633809398.
+num_leaves, val_score: 0.634554:  30%|###############                                   | 6/20 [00:01&lt;00:04,  3.22it/s]</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[60]	valid_0&#39;s auc: 0.619126
+[80]	valid_0&#39;s auc: 0.618067
+[100]	valid_0&#39;s auc: 0.612788
+[20]	valid_0&#39;s auc: 0.618691
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>num_leaves, val_score: 0.634554:  30%|###############                                   | 6/20 [00:02&lt;00:04,  3.22it/s]</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[40]	valid_0&#39;s auc: 0.617527
 [60]	valid_0&#39;s auc: 0.619126
 [80]	valid_0&#39;s auc: 0.618067
 [100]	valid_0&#39;s auc: 0.612788
@@ -15411,8 +15433,8 @@ num_leaves, val_score: 0.634554:  30%|###############                           
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>num_leaves, val_score: 0.634554:  35%|#################5                                | 7/20 [00:02&lt;00:04,  3.14it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:12,930]</span> Trial 13 finished with value: 0.612788048716376 and parameters: {&#39;num_leaves&#39;: 207}. Best is trial 7 with value: 0.6345541633809398.
-num_leaves, val_score: 0.634554:  35%|#################5                                | 7/20 [00:02&lt;00:04,  3.14it/s]</pre>
+<pre>num_leaves, val_score: 0.634554:  35%|#################5                                | 7/20 [00:02&lt;00:04,  3.15it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:31,620]</span> Trial 13 finished with value: 0.612788048716376 and parameters: {&#39;num_leaves&#39;: 207}. Best is trial 7 with value: 0.6345541633809398.
+num_leaves, val_score: 0.634554:  35%|#################5                                | 7/20 [00:02&lt;00:04,  3.15it/s]</pre>
 </div>
 </div>
 
@@ -15438,8 +15460,8 @@ num_leaves, val_score: 0.634554:  35%|#################5                        
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>num_leaves, val_score: 0.634554:  40%|####################                              | 8/20 [00:02&lt;00:03,  3.09it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:13,266]</span> Trial 14 finished with value: 0.612788048716376 and parameters: {&#39;num_leaves&#39;: 236}. Best is trial 7 with value: 0.6345541633809398.
-num_leaves, val_score: 0.634554:  40%|####################                              | 8/20 [00:02&lt;00:03,  3.09it/s]</pre>
+<pre>num_leaves, val_score: 0.634554:  40%|####################                              | 8/20 [00:02&lt;00:03,  3.10it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:31,954]</span> Trial 14 finished with value: 0.612788048716376 and parameters: {&#39;num_leaves&#39;: 236}. Best is trial 7 with value: 0.6345541633809398.
+num_leaves, val_score: 0.634554:  40%|####################                              | 8/20 [00:02&lt;00:03,  3.10it/s]</pre>
 </div>
 </div>
 
@@ -15464,8 +15486,8 @@ num_leaves, val_score: 0.634554:  40%|####################                      
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>num_leaves, val_score: 0.634554:  45%|######################5                           | 9/20 [00:02&lt;00:03,  3.07it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:13,597]</span> Trial 15 finished with value: 0.612788048716376 and parameters: {&#39;num_leaves&#39;: 135}. Best is trial 7 with value: 0.6345541633809398.
-num_leaves, val_score: 0.634554:  45%|######################5                           | 9/20 [00:02&lt;00:03,  3.07it/s]</pre>
+<pre>num_leaves, val_score: 0.634554:  45%|######################5                           | 9/20 [00:02&lt;00:03,  3.09it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:32,278]</span> Trial 15 finished with value: 0.612788048716376 and parameters: {&#39;num_leaves&#39;: 135}. Best is trial 7 with value: 0.6345541633809398.
+num_leaves, val_score: 0.634554:  45%|######################5                           | 9/20 [00:02&lt;00:03,  3.09it/s]</pre>
 </div>
 </div>
 
@@ -15494,9 +15516,9 @@ num_leaves, val_score: 0.634554:  45%|######################5                   
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>num_leaves, val_score: 0.634554:  50%|########################5                        | 10/20 [00:03&lt;00:03,  3.05it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:13,927]</span> Trial 16 finished with value: 0.612788048716376 and parameters: {&#39;num_leaves&#39;: 110}. Best is trial 7 with value: 0.6345541633809398.
-num_leaves, val_score: 0.638782:  50%|########################5                        | 10/20 [00:03&lt;00:03,  3.05it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:14,006]</span> Trial 17 finished with value: 0.6387817985338357 and parameters: {&#39;num_leaves&#39;: 4}. Best is trial 17 with value: 0.6387817985338357.
-num_leaves, val_score: 0.638782:  55%|##########################9                      | 11/20 [00:03&lt;00:02,  3.05it/s]</pre>
+<pre>num_leaves, val_score: 0.634554:  50%|########################5                        | 10/20 [00:03&lt;00:03,  3.09it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:32,601]</span> Trial 16 finished with value: 0.612788048716376 and parameters: {&#39;num_leaves&#39;: 110}. Best is trial 7 with value: 0.6345541633809398.
+num_leaves, val_score: 0.638782:  50%|########################5                        | 10/20 [00:03&lt;00:03,  3.09it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:32,684]</span> Trial 17 finished with value: 0.6387817985338357 and parameters: {&#39;num_leaves&#39;: 4}. Best is trial 17 with value: 0.6387817985338357.
+num_leaves, val_score: 0.638782:  55%|##########################9                      | 11/20 [00:03&lt;00:02,  3.09it/s]</pre>
 </div>
 </div>
 
@@ -15527,9 +15549,9 @@ num_leaves, val_score: 0.638782:  55%|##########################9               
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>num_leaves, val_score: 0.638782:  60%|#############################4                   | 12/20 [00:03&lt;00:01,  4.51it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:14,131]</span> Trial 18 finished with value: 0.6305200210286516 and parameters: {&#39;num_leaves&#39;: 16}. Best is trial 17 with value: 0.6387817985338357.
-num_leaves, val_score: 0.651490:  60%|#############################4                   | 12/20 [00:03&lt;00:01,  4.51it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:14,207]</span> Trial 19 finished with value: 0.6514902596454336 and parameters: {&#39;num_leaves&#39;: 3}. Best is trial 19 with value: 0.6514902596454336.
-num_leaves, val_score: 0.657171:  65%|###############################8                 | 13/20 [00:03&lt;00:01,  4.51it/s]</pre>
+<pre>num_leaves, val_score: 0.638782:  60%|#############################4                   | 12/20 [00:03&lt;00:01,  4.49it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:32,819]</span> Trial 18 finished with value: 0.6305200210286516 and parameters: {&#39;num_leaves&#39;: 16}. Best is trial 17 with value: 0.6387817985338357.
+num_leaves, val_score: 0.651490:  60%|#############################4                   | 12/20 [00:03&lt;00:01,  4.49it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:32,897]</span> Trial 19 finished with value: 0.6514902596454336 and parameters: {&#39;num_leaves&#39;: 3}. Best is trial 19 with value: 0.6514902596454336.
+num_leaves, val_score: 0.651490:  65%|###############################8                 | 13/20 [00:03&lt;00:01,  4.49it/s]</pre>
 </div>
 </div>
 
@@ -15563,9 +15585,8 @@ num_leaves, val_score: 0.657171:  65%|###############################8          
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>num_leaves, val_score: 0.657171:  70%|##################################3              | 14/20 [00:03&lt;00:00,  6.11it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:14,285]</span> Trial 20 finished with value: 0.6571709162066649 and parameters: {&#39;num_leaves&#39;: 2}. Best is trial 20 with value: 0.6571709162066649.
-num_leaves, val_score: 0.657171:  75%|####################################7            | 15/20 [00:03&lt;00:00,  5.58it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:14,519]</span> Trial 21 finished with value: 0.6296474780221385 and parameters: {&#39;num_leaves&#39;: 50}. Best is trial 20 with value: 0.6571709162066649.
-num_leaves, val_score: 0.657171:  75%|####################################7            | 15/20 [00:03&lt;00:00,  5.58it/s]</pre>
+<pre>num_leaves, val_score: 0.657171:  70%|##################################3              | 14/20 [00:03&lt;00:00,  6.04it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:32,980]</span> Trial 20 finished with value: 0.6571709162066649 and parameters: {&#39;num_leaves&#39;: 2}. Best is trial 20 with value: 0.6571709162066649.
+num_leaves, val_score: 0.657171:  70%|##################################3              | 14/20 [00:03&lt;00:00,  6.04it/s]</pre>
 </div>
 </div>
 
@@ -15592,7 +15613,8 @@ num_leaves, val_score: 0.657171:  75%|####################################7     
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>num_leaves, val_score: 0.657171:  80%|#######################################2         | 16/20 [00:03&lt;00:00,  5.14it/s]</pre>
+<pre>num_leaves, val_score: 0.657171:  75%|####################################7            | 15/20 [00:03&lt;00:00,  5.13it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:33,277]</span> Trial 21 finished with value: 0.6296474780221385 and parameters: {&#39;num_leaves&#39;: 50}. Best is trial 20 with value: 0.6571709162066649.
+num_leaves, val_score: 0.657171:  75%|####################################7            | 15/20 [00:03&lt;00:00,  5.13it/s]</pre>
 </div>
 </div>
 
@@ -15619,8 +15641,8 @@ num_leaves, val_score: 0.657171:  75%|####################################7     
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre><span class="ansi-green-fg">[I 2023-01-12 19:19:14,761]</span> Trial 22 finished with value: 0.6124886824965683 and parameters: {&#39;num_leaves&#39;: 45}. Best is trial 20 with value: 0.6571709162066649.
-num_leaves, val_score: 0.657171:  80%|#######################################2         | 16/20 [00:03&lt;00:00,  5.14it/s]</pre>
+<pre>num_leaves, val_score: 0.657171:  80%|#######################################2         | 16/20 [00:03&lt;00:00,  4.70it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:33,547]</span> Trial 22 finished with value: 0.6124886824965683 and parameters: {&#39;num_leaves&#39;: 45}. Best is trial 20 with value: 0.6571709162066649.
+num_leaves, val_score: 0.657171:  80%|#######################################2         | 16/20 [00:03&lt;00:00,  4.70it/s]</pre>
 </div>
 </div>
 
@@ -15634,7 +15656,6 @@ num_leaves, val_score: 0.657171:  80%|#######################################2  
 <pre>[20]	valid_0&#39;s auc: 0.618691
 [40]	valid_0&#39;s auc: 0.617527
 [60]	valid_0&#39;s auc: 0.619126
-[80]	valid_0&#39;s auc: 0.618067
 </pre>
 </div>
 </div>
@@ -15646,8 +15667,8 @@ num_leaves, val_score: 0.657171:  80%|#######################################2  
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>num_leaves, val_score: 0.657171:  85%|#########################################6       | 17/20 [00:04&lt;00:00,  4.30it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:15,104]</span> Trial 23 finished with value: 0.612788048716376 and parameters: {&#39;num_leaves&#39;: 170}. Best is trial 20 with value: 0.6571709162066649.
-num_leaves, val_score: 0.657171:  85%|#########################################6       | 17/20 [00:04&lt;00:00,  4.30it/s]</pre>
+<pre>num_leaves, val_score: 0.657171:  85%|#########################################6       | 17/20 [00:04&lt;00:00,  3.70it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:33,983]</span> Trial 23 finished with value: 0.612788048716376 and parameters: {&#39;num_leaves&#39;: 170}. Best is trial 20 with value: 0.6571709162066649.
+num_leaves, val_score: 0.657171:  85%|#########################################6       | 17/20 [00:04&lt;00:00,  3.70it/s]</pre>
 </div>
 </div>
 
@@ -15658,36 +15679,11 @@ num_leaves, val_score: 0.657171:  85%|#########################################6
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[100]	valid_0&#39;s auc: 0.612788
+<pre>[80]	valid_0&#39;s auc: 0.618067
+[100]	valid_0&#39;s auc: 0.612788
 [20]	valid_0&#39;s auc: 0.618691
 [40]	valid_0&#39;s auc: 0.617563
-[60]	valid_0&#39;s auc: 0.615782</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>num_leaves, val_score: 0.657171:  90%|############################################1    | 18/20 [00:04&lt;00:00,  3.98it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:15,408]</span> Trial 24 finished with value: 0.6224991968223371 and parameters: {&#39;num_leaves&#39;: 80}. Best is trial 20 with value: 0.6571709162066649.
-num_leaves, val_score: 0.657171:  90%|############################################1    | 18/20 [00:04&lt;00:00,  3.98it/s]</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>
-[80]	valid_0&#39;s auc: 0.626406
-[100]	valid_0&#39;s auc: 0.622499
-[20]	valid_0&#39;s auc: 0.636851
+[60]	valid_0&#39;s auc: 0.615782
 </pre>
 </div>
 </div>
@@ -15699,8 +15695,8 @@ num_leaves, val_score: 0.657171:  90%|##########################################
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>num_leaves, val_score: 0.657171:  95%|##############################################5  | 19/20 [00:04&lt;00:00,  4.16it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:15,618]</span> Trial 25 finished with value: 0.6408408539969042 and parameters: {&#39;num_leaves&#39;: 30}. Best is trial 20 with value: 0.6571709162066649.
-num_leaves, val_score: 0.657171:  95%|##############################################5  | 19/20 [00:04&lt;00:00,  4.16it/s]</pre>
+<pre>num_leaves, val_score: 0.657171:  90%|############################################1    | 18/20 [00:04&lt;00:00,  3.27it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:34,388]</span> Trial 24 finished with value: 0.6224991968223371 and parameters: {&#39;num_leaves&#39;: 80}. Best is trial 20 with value: 0.6571709162066649.
+num_leaves, val_score: 0.657171:  90%|############################################1    | 18/20 [00:04&lt;00:00,  3.27it/s]</pre>
 </div>
 </div>
 
@@ -15711,8 +15707,36 @@ num_leaves, val_score: 0.657171:  95%|##########################################
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[40]	valid_0&#39;s auc: 0.638278
-[60]	valid_0&#39;s auc: 0.643528
+<pre>[80]	valid_0&#39;s auc: 0.626406
+[100]	valid_0&#39;s auc: 0.622499
+[20]	valid_0&#39;s auc: 0.636851
+[40]	valid_0&#39;s auc: 0.638278
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>num_leaves, val_score: 0.657171:  95%|##############################################5  | 19/20 [00:05&lt;00:00,  3.53it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:34,610]</span> Trial 25 finished with value: 0.6408408539969042 and parameters: {&#39;num_leaves&#39;: 30}. Best is trial 20 with value: 0.6571709162066649.
+num_leaves, val_score: 0.657171:  95%|##############################################5  | 19/20 [00:05&lt;00:00,  3.53it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:34,692]</span> Trial 26 finished with value: 0.6387817985338357 and parameters: {&#39;num_leaves&#39;: 4}. Best is trial 20 with value: 0.6571709162066649.
+num_leaves, val_score: 0.657171: 100%|#################################################| 20/20 [00:05&lt;00:00,  3.90it/s]
+  0%|                                                                                           | 0/10 [00:00&lt;?, ?it/s]</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[60]	valid_0&#39;s auc: 0.643528
 [80]	valid_0&#39;s auc: 0.638351
 [100]	valid_0&#39;s auc: 0.640841
 [20]	valid_0&#39;s auc: 0.661632
@@ -15731,12 +15755,10 @@ num_leaves, val_score: 0.657171:  95%|##########################################
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>num_leaves, val_score: 0.657171:  95%|##############################################5  | 19/20 [00:04&lt;00:00,  4.16it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:15,700]</span> Trial 26 finished with value: 0.6387817985338357 and parameters: {&#39;num_leaves&#39;: 4}. Best is trial 20 with value: 0.6571709162066649.
-num_leaves, val_score: 0.657171: 100%|#################################################| 20/20 [00:04&lt;00:00,  4.15it/s]
-bagging, val_score: 0.657171:   0%|                                                             | 0/10 [00:00&lt;?, ?it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:15,782]</span> Trial 27 finished with value: 0.6560610707088408 and parameters: {&#39;bagging_fraction&#39;: 0.4524097857413924, &#39;bagging_freq&#39;: 2}. Best is trial 27 with value: 0.6560610707088408.
-bagging, val_score: 0.659737:  20%|##########6                                          | 2/10 [00:00&lt;00:00, 14.75it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:15,845]</span> Trial 28 finished with value: 0.6597374339203832 and parameters: {&#39;bagging_fraction&#39;: 0.6466366423837587, &#39;bagging_freq&#39;: 3}. Best is trial 28 with value: 0.6597374339203832.
-bagging, val_score: 0.659737:  20%|##########6                                          | 2/10 [00:00&lt;00:00, 14.75it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:15,906]</span> Trial 29 finished with value: 0.6537939192149304 and parameters: {&#39;bagging_fraction&#39;: 0.7395735344574693, &#39;bagging_freq&#39;: 4}. Best is trial 28 with value: 0.6597374339203832.
-bagging, val_score: 0.659737:  30%|###############9                                     | 3/10 [00:00&lt;00:00, 14.75it/s]</pre>
+<pre>bagging, val_score: 0.657171:   0%|                                                             | 0/10 [00:00&lt;?, ?it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:34,772]</span> Trial 27 finished with value: 0.6560610707088408 and parameters: {&#39;bagging_fraction&#39;: 0.4524097857413924, &#39;bagging_freq&#39;: 2}. Best is trial 27 with value: 0.6560610707088408.
+bagging, val_score: 0.659737:  20%|##########6                                          | 2/10 [00:00&lt;00:00, 14.53it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:34,837]</span> Trial 28 finished with value: 0.6597374339203832 and parameters: {&#39;bagging_fraction&#39;: 0.6466366423837587, &#39;bagging_freq&#39;: 3}. Best is trial 28 with value: 0.6597374339203832.
+bagging, val_score: 0.659737:  20%|##########6                                          | 2/10 [00:00&lt;00:00, 14.53it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:34,902]</span> Trial 29 finished with value: 0.6537939192149304 and parameters: {&#39;bagging_fraction&#39;: 0.7395735344574693, &#39;bagging_freq&#39;: 4}. Best is trial 28 with value: 0.6597374339203832.
+bagging, val_score: 0.659737:  30%|###############9                                     | 3/10 [00:00&lt;00:00, 14.53it/s]</pre>
 </div>
 </div>
 
@@ -15762,7 +15784,7 @@ bagging, val_score: 0.659737:  30%|###############9                             
 [60]	valid_0&#39;s auc: 0.646248
 [80]	valid_0&#39;s auc: 0.654002
 [100]	valid_0&#39;s auc: 0.653794
-[20]	valid_0&#39;s auc: 0.658175</pre>
+</pre>
 </div>
 </div>
 
@@ -15773,10 +15795,10 @@ bagging, val_score: 0.659737:  30%|###############9                             
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>bagging, val_score: 0.661307:  40%|#####################2                               | 4/10 [00:00&lt;00:00, 15.62it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:15,968]</span> Trial 30 finished with value: 0.6613072811705949 and parameters: {&#39;bagging_fraction&#39;: 0.8842596656990331, &#39;bagging_freq&#39;: 7}. Best is trial 30 with value: 0.6613072811705949.
-bagging, val_score: 0.661307:  40%|#####################2                               | 4/10 [00:00&lt;00:00, 15.62it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:16,033]</span> Trial 31 finished with value: 0.6523007389234499 and parameters: {&#39;bagging_fraction&#39;: 0.7132544517067284, &#39;bagging_freq&#39;: 3}. Best is trial 30 with value: 0.6613072811705949.
-bagging, val_score: 0.661307:  60%|###############################8                     | 6/10 [00:00&lt;00:00, 15.48it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:16,099]</span> Trial 32 finished with value: 0.6524650252635883 and parameters: {&#39;bagging_fraction&#39;: 0.4430823727298545, &#39;bagging_freq&#39;: 7}. Best is trial 30 with value: 0.6613072811705949.
-bagging, val_score: 0.661307:  60%|###############################8                     | 6/10 [00:00&lt;00:00, 15.48it/s]</pre>
+<pre>bagging, val_score: 0.661307:  40%|#####################2                               | 4/10 [00:00&lt;00:00, 14.85it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:34,970]</span> Trial 30 finished with value: 0.6613072811705949 and parameters: {&#39;bagging_fraction&#39;: 0.8842596656990331, &#39;bagging_freq&#39;: 7}. Best is trial 30 with value: 0.6613072811705949.
+bagging, val_score: 0.661307:  40%|#####################2                               | 4/10 [00:00&lt;00:00, 14.85it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:35,034]</span> Trial 31 finished with value: 0.6523007389234499 and parameters: {&#39;bagging_fraction&#39;: 0.7132544517067284, &#39;bagging_freq&#39;: 3}. Best is trial 30 with value: 0.6613072811705949.
+bagging, val_score: 0.661307:  60%|###############################8                     | 6/10 [00:00&lt;00:00, 15.26it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:35,097]</span> Trial 32 finished with value: 0.6524650252635883 and parameters: {&#39;bagging_fraction&#39;: 0.4430823727298545, &#39;bagging_freq&#39;: 7}. Best is trial 30 with value: 0.6613072811705949.
+bagging, val_score: 0.661307:  60%|###############################8                     | 6/10 [00:00&lt;00:00, 15.26it/s]</pre>
 </div>
 </div>
 
@@ -15787,7 +15809,7 @@ bagging, val_score: 0.661307:  60%|###############################8             
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>
+<pre>[20]	valid_0&#39;s auc: 0.658175
 [40]	valid_0&#39;s auc: 0.663728
 [60]	valid_0&#39;s auc: 0.668094
 [80]	valid_0&#39;s auc: 0.664144
@@ -15802,6 +15824,7 @@ bagging, val_score: 0.661307:  60%|###############################8             
 [60]	valid_0&#39;s auc: 0.661716
 [80]	valid_0&#39;s auc: 0.655134
 [100]	valid_0&#39;s auc: 0.652465
+[20]	valid_0&#39;s auc: 0.664115
 </pre>
 </div>
 </div>
@@ -15813,10 +15836,10 @@ bagging, val_score: 0.661307:  60%|###############################8             
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>bagging, val_score: 0.661307:  60%|###############################8                     | 6/10 [00:00&lt;00:00, 15.48it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:16,159]</span> Trial 33 finished with value: 0.6572658372031893 and parameters: {&#39;bagging_fraction&#39;: 0.6523082956334483, &#39;bagging_freq&#39;: 5}. Best is trial 30 with value: 0.6613072811705949.
-bagging, val_score: 0.661307:  80%|##########################################4          | 8/10 [00:00&lt;00:00, 15.84it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:16,221]</span> Trial 34 finished with value: 0.6582734600893718 and parameters: {&#39;bagging_fraction&#39;: 0.5284921215254861, &#39;bagging_freq&#39;: 4}. Best is trial 30 with value: 0.6613072811705949.
-bagging, val_score: 0.664100:  80%|##########################################4          | 8/10 [00:00&lt;00:00, 15.84it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:16,295]</span> Trial 35 finished with value: 0.6641001489529484 and parameters: {&#39;bagging_fraction&#39;: 0.6807182826316669, &#39;bagging_freq&#39;: 1}. Best is trial 35 with value: 0.6641001489529484.
-bagging, val_score: 0.664100:  90%|###############################################7     | 9/10 [00:00&lt;00:00, 15.84it/s]</pre>
+<pre>bagging, val_score: 0.661307:  60%|###############################8                     | 6/10 [00:00&lt;00:00, 15.26it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:35,160]</span> Trial 33 finished with value: 0.6572658372031893 and parameters: {&#39;bagging_fraction&#39;: 0.6523082956334483, &#39;bagging_freq&#39;: 5}. Best is trial 30 with value: 0.6613072811705949.
+bagging, val_score: 0.661307:  80%|##########################################4          | 8/10 [00:00&lt;00:00, 15.51it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:35,223]</span> Trial 34 finished with value: 0.6582734600893718 and parameters: {&#39;bagging_fraction&#39;: 0.5284921215254861, &#39;bagging_freq&#39;: 4}. Best is trial 30 with value: 0.6613072811705949.
+bagging, val_score: 0.664100:  80%|##########################################4          | 8/10 [00:00&lt;00:00, 15.51it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:35,290]</span> Trial 35 finished with value: 0.6641001489529484 and parameters: {&#39;bagging_fraction&#39;: 0.6807182826316669, &#39;bagging_freq&#39;: 1}. Best is trial 35 with value: 0.6641001489529484.
+bagging, val_score: 0.664100:  90%|###############################################7     | 9/10 [00:00&lt;00:00, 15.51it/s]</pre>
 </div>
 </div>
 
@@ -15827,8 +15850,7 @@ bagging, val_score: 0.664100:  90%|#############################################
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[20]	valid_0&#39;s auc: 0.664115
-[40]	valid_0&#39;s auc: 0.657018
+<pre>[40]	valid_0&#39;s auc: 0.657018
 [60]	valid_0&#39;s auc: 0.652074
 [80]	valid_0&#39;s auc: 0.658657
 [100]	valid_0&#39;s auc: 0.657266
@@ -15854,8 +15876,8 @@ bagging, val_score: 0.664100:  90%|#############################################
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>bagging, val_score: 0.664100: 100%|####################################################| 10/10 [00:00&lt;00:00, 15.30it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:16,360]</span> Trial 36 finished with value: 0.6597301323052659 and parameters: {&#39;bagging_fraction&#39;: 0.9563727368822528, &#39;bagging_freq&#39;: 2}. Best is trial 35 with value: 0.6641001489529484.
-bagging, val_score: 0.664100: 100%|####################################################| 10/10 [00:00&lt;00:00, 15.28it/s]
+<pre>bagging, val_score: 0.664100: 100%|####################################################| 10/10 [00:00&lt;00:00, 14.90it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:35,367]</span> Trial 36 finished with value: 0.6597301323052659 and parameters: {&#39;bagging_fraction&#39;: 0.9563727368822528, &#39;bagging_freq&#39;: 2}. Best is trial 35 with value: 0.6641001489529484.
+bagging, val_score: 0.664100: 100%|####################################################| 10/10 [00:00&lt;00:00, 14.92it/s]
 feature_fraction_stage2, val_score: 0.664100:   0%|                                              | 0/6 [00:00&lt;?, ?it/s]</pre>
 </div>
 </div>
@@ -15871,46 +15893,6 @@ feature_fraction_stage2, val_score: 0.664100:   0%|                             
 [60]	valid_0&#39;s auc: 0.662622
 [80]	valid_0&#39;s auc: 0.657379
 [100]	valid_0&#39;s auc: 0.65973
-[20]	valid_0&#39;s auc: 0.663093
-[40]	valid_0&#39;s auc: 0.662932
-[60]	valid_0&#39;s auc: 0.660621
-[80]	valid_0&#39;s auc: 0.659482
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>feature_fraction_stage2, val_score: 0.664100:  17%|######3                               | 1/6 [00:00&lt;00:00,  5.97it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:16,534]</span> Trial 37 finished with value: 0.663012208300476 and parameters: {&#39;feature_fraction&#39;: 0.6479999999999999}. Best is trial 37 with value: 0.663012208300476.
-feature_fraction_stage2, val_score: 0.664761:  17%|######3                               | 1/6 [00:00&lt;00:00,  5.97it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:16,605]</span> Trial 38 finished with value: 0.6647609451210608 and parameters: {&#39;feature_fraction&#39;: 0.6799999999999999}. Best is trial 38 with value: 0.6647609451210608.
-feature_fraction_stage2, val_score: 0.664761:  50%|###################                   | 3/6 [00:00&lt;00:00, 10.55it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:16,673]</span> Trial 39 finished with value: 0.6617088700020445 and parameters: {&#39;feature_fraction&#39;: 0.52}. Best is trial 38 with value: 0.6647609451210608.
-feature_fraction_stage2, val_score: 0.664761:  50%|###################                   | 3/6 [00:00&lt;00:00, 10.55it/s]</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[100]	valid_0&#39;s auc: 0.663012
-[20]	valid_0&#39;s auc: 0.666846
-[40]	valid_0&#39;s auc: 0.666214
-[60]	valid_0&#39;s auc: 0.665911
-[80]	valid_0&#39;s auc: 0.662395
-[100]	valid_0&#39;s auc: 0.664761
-[20]	valid_0&#39;s auc: 0.646752
-[40]	valid_0&#39;s auc: 0.663107
-[60]	valid_0&#39;s auc: 0.661041
-[80]	valid_0&#39;s auc: 0.657328
-[100]	valid_0&#39;s auc: 0.661709
 [20]	valid_0&#39;s auc: 0.658084
 [40]	valid_0&#39;s auc: 0.666597
 [60]	valid_0&#39;s auc: 0.660103
@@ -15925,11 +15907,10 @@ feature_fraction_stage2, val_score: 0.664761:  50%|###################          
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>feature_fraction_stage2, val_score: 0.664761:  50%|###################                   | 3/6 [00:00&lt;00:00, 10.55it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:16,738]</span> Trial 40 finished with value: 0.6641001489529484 and parameters: {&#39;feature_fraction&#39;: 0.616}. Best is trial 38 with value: 0.6647609451210608.
-feature_fraction_stage2, val_score: 0.664761:  83%|###############################6      | 5/6 [00:00&lt;00:00, 12.72it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:16,799]</span> Trial 41 finished with value: 0.6612196617891878 and parameters: {&#39;feature_fraction&#39;: 0.552}. Best is trial 38 with value: 0.6647609451210608.
-feature_fraction_stage2, val_score: 0.664761:  83%|###############################6      | 5/6 [00:00&lt;00:00, 12.72it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:16,862]</span> Trial 42 finished with value: 0.6612196617891878 and parameters: {&#39;feature_fraction&#39;: 0.584}. Best is trial 38 with value: 0.6647609451210608.
-feature_fraction_stage2, val_score: 0.664761: 100%|######################################| 6/6 [00:00&lt;00:00, 12.03it/s]
-regularization_factors, val_score: 0.664761:   0%|                                              | 0/20 [00:00&lt;?, ?it/s]</pre>
+<pre>feature_fraction_stage2, val_score: 0.664100:  17%|######3                               | 1/6 [00:00&lt;00:00,  6.08it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:35,539]</span> Trial 37 finished with value: 0.6641001489529484 and parameters: {&#39;feature_fraction&#39;: 0.616}. Best is trial 37 with value: 0.6641001489529484.
+feature_fraction_stage2, val_score: 0.664100:  17%|######3                               | 1/6 [00:00&lt;00:00,  6.08it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:35,602]</span> Trial 38 finished with value: 0.663012208300476 and parameters: {&#39;feature_fraction&#39;: 0.6479999999999999}. Best is trial 37 with value: 0.6641001489529484.
+feature_fraction_stage2, val_score: 0.664100:  50%|###################                   | 3/6 [00:00&lt;00:00, 11.21it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:35,665]</span> Trial 39 finished with value: 0.6612196617891878 and parameters: {&#39;feature_fraction&#39;: 0.584}. Best is trial 37 with value: 0.6641001489529484.
+feature_fraction_stage2, val_score: 0.664100:  50%|###################                   | 3/6 [00:00&lt;00:00, 11.21it/s]</pre>
 </div>
 </div>
 
@@ -15942,16 +15923,57 @@ regularization_factors, val_score: 0.664761:   0%|                              
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>[80]	valid_0&#39;s auc: 0.659318
 [100]	valid_0&#39;s auc: 0.6641
+[20]	valid_0&#39;s auc: 0.663093
+[40]	valid_0&#39;s auc: 0.662932
+[60]	valid_0&#39;s auc: 0.660621
+[80]	valid_0&#39;s auc: 0.659482
+[100]	valid_0&#39;s auc: 0.663012
 [20]	valid_0&#39;s auc: 0.651443
 [40]	valid_0&#39;s auc: 0.660595
 [60]	valid_0&#39;s auc: 0.657609
 [80]	valid_0&#39;s auc: 0.65655
 [100]	valid_0&#39;s auc: 0.66122
+[20]	valid_0&#39;s auc: 0.666846
+[40]	valid_0&#39;s auc: 0.666214
+[60]	valid_0&#39;s auc: 0.665911
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>feature_fraction_stage2, val_score: 0.664761:  50%|###################                   | 3/6 [00:00&lt;00:00, 11.21it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:35,731]</span> Trial 40 finished with value: 0.6647609451210608 and parameters: {&#39;feature_fraction&#39;: 0.6799999999999999}. Best is trial 40 with value: 0.6647609451210608.
+feature_fraction_stage2, val_score: 0.664761:  83%|###############################6      | 5/6 [00:00&lt;00:00, 13.13it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:35,794]</span> Trial 41 finished with value: 0.6612196617891878 and parameters: {&#39;feature_fraction&#39;: 0.552}. Best is trial 40 with value: 0.6647609451210608.
+feature_fraction_stage2, val_score: 0.664761:  83%|###############################6      | 5/6 [00:00&lt;00:00, 13.13it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:35,858]</span> Trial 42 finished with value: 0.6617088700020445 and parameters: {&#39;feature_fraction&#39;: 0.52}. Best is trial 40 with value: 0.6647609451210608.
+feature_fraction_stage2, val_score: 0.664761: 100%|######################################| 6/6 [00:00&lt;00:00, 12.35it/s]
+regularization_factors, val_score: 0.664761:   0%|                                              | 0/20 [00:00&lt;?, ?it/s]</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[80]	valid_0&#39;s auc: 0.662395
+[100]	valid_0&#39;s auc: 0.664761
 [20]	valid_0&#39;s auc: 0.651443
 [40]	valid_0&#39;s auc: 0.660595
 [60]	valid_0&#39;s auc: 0.657609
 [80]	valid_0&#39;s auc: 0.65655
 [100]	valid_0&#39;s auc: 0.66122
+[20]	valid_0&#39;s auc: 0.646752
+[40]	valid_0&#39;s auc: 0.663107
+[60]	valid_0&#39;s auc: 0.661041
+[80]	valid_0&#39;s auc: 0.657328
+[100]	valid_0&#39;s auc: 0.661709
 [20]	valid_0&#39;s auc: 0.666846
 </pre>
 </div>
@@ -15964,10 +15986,10 @@ regularization_factors, val_score: 0.664761:   0%|                              
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>regularization_factors, val_score: 0.664761:   0%|                                              | 0/20 [00:00&lt;?, ?it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:16,942]</span> Trial 43 finished with value: 0.6647609451210608 and parameters: {&#39;lambda_l1&#39;: 6.111485505916151e-08, &#39;lambda_l2&#39;: 1.186571453723754e-06}. Best is trial 43 with value: 0.6647609451210608.
-regularization_factors, val_score: 0.664761:  10%|###8                                  | 2/20 [00:00&lt;00:01, 14.53it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:17,008]</span> Trial 44 finished with value: 0.6647609451210608 and parameters: {&#39;lambda_l1&#39;: 5.0066777084815364e-05, &#39;lambda_l2&#39;: 6.2667776667875636e-06}. Best is trial 43 with value: 0.6647609451210608.
-regularization_factors, val_score: 0.664790:  10%|###8                                  | 2/20 [00:00&lt;00:01, 14.53it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:17,071]</span> Trial 45 finished with value: 0.6647901515815299 and parameters: {&#39;lambda_l1&#39;: 0.0012405178473464484, &#39;lambda_l2&#39;: 0.0008045875980552012}. Best is trial 45 with value: 0.6647901515815299.
-regularization_factors, val_score: 0.664790:  15%|#####7                                | 3/20 [00:00&lt;00:01, 14.53it/s]</pre>
+<pre>regularization_factors, val_score: 0.664761:   0%|                                              | 0/20 [00:00&lt;?, ?it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:35,936]</span> Trial 43 finished with value: 0.6647609451210608 and parameters: {&#39;lambda_l1&#39;: 6.111485505916151e-08, &#39;lambda_l2&#39;: 1.186571453723754e-06}. Best is trial 43 with value: 0.6647609451210608.
+regularization_factors, val_score: 0.664761:  10%|###8                                  | 2/20 [00:00&lt;00:01, 14.74it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:36,001]</span> Trial 44 finished with value: 0.6647609451210608 and parameters: {&#39;lambda_l1&#39;: 5.0066777084815364e-05, &#39;lambda_l2&#39;: 6.2667776667875636e-06}. Best is trial 43 with value: 0.6647609451210608.
+regularization_factors, val_score: 0.664790:  10%|###8                                  | 2/20 [00:00&lt;00:01, 14.74it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:36,065]</span> Trial 45 finished with value: 0.6647901515815299 and parameters: {&#39;lambda_l1&#39;: 0.0012405178473464484, &#39;lambda_l2&#39;: 0.0008045875980552012}. Best is trial 45 with value: 0.6647901515815299.
+regularization_factors, val_score: 0.664790:  15%|#####7                                | 3/20 [00:00&lt;00:01, 14.74it/s]</pre>
 </div>
 </div>
 
@@ -16004,10 +16026,10 @@ regularization_factors, val_score: 0.664790:  15%|#####7                        
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>regularization_factors, val_score: 0.664790:  20%|#######6                              | 4/20 [00:00&lt;00:01, 14.98it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:17,138]</span> Trial 46 finished with value: 0.6637752270802302 and parameters: {&#39;lambda_l1&#39;: 0.18360943130946591, &#39;lambda_l2&#39;: 1.8339857865576576}. Best is trial 45 with value: 0.6647901515815299.
-regularization_factors, val_score: 0.664827:  20%|#######6                              | 4/20 [00:00&lt;00:01, 14.98it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:17,202]</span> Trial 47 finished with value: 0.6648266596571162 and parameters: {&#39;lambda_l1&#39;: 0.0004998236200075815, &#39;lambda_l2&#39;: 6.64026409693406e-05}. Best is trial 47 with value: 0.6648266596571162.
-regularization_factors, val_score: 0.666524:  30%|###########4                          | 6/20 [00:00&lt;00:00, 15.23it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:17,266]</span> Trial 48 finished with value: 0.66652428517188 and parameters: {&#39;lambda_l1&#39;: 4.428285276136153e-08, &#39;lambda_l2&#39;: 1.2211236756740358}. Best is trial 48 with value: 0.66652428517188.
-regularization_factors, val_score: 0.666524:  30%|###########4                          | 6/20 [00:00&lt;00:00, 15.23it/s]</pre>
+<pre>regularization_factors, val_score: 0.664790:  20%|#######6                              | 4/20 [00:00&lt;00:01, 15.00it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:36,132]</span> Trial 46 finished with value: 0.6637752270802302 and parameters: {&#39;lambda_l1&#39;: 0.18360943130946591, &#39;lambda_l2&#39;: 1.8339857865576576}. Best is trial 45 with value: 0.6647901515815299.
+regularization_factors, val_score: 0.664827:  20%|#######6                              | 4/20 [00:00&lt;00:01, 15.00it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:36,197]</span> Trial 47 finished with value: 0.6648266596571162 and parameters: {&#39;lambda_l1&#39;: 0.0004998236200075815, &#39;lambda_l2&#39;: 6.64026409693406e-05}. Best is trial 47 with value: 0.6648266596571162.
+regularization_factors, val_score: 0.666524:  30%|###########4                          | 6/20 [00:00&lt;00:00, 15.19it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:36,263]</span> Trial 48 finished with value: 0.66652428517188 and parameters: {&#39;lambda_l1&#39;: 4.428285276136153e-08, &#39;lambda_l2&#39;: 1.2211236756740358}. Best is trial 48 with value: 0.66652428517188.
+regularization_factors, val_score: 0.666524:  30%|###########4                          | 6/20 [00:00&lt;00:00, 15.19it/s]</pre>
 </div>
 </div>
 
@@ -16044,10 +16066,10 @@ regularization_factors, val_score: 0.666524:  30%|###########4                  
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>regularization_factors, val_score: 0.666524:  30%|###########4                          | 6/20 [00:00&lt;00:00, 15.23it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:17,338]</span> Trial 49 finished with value: 0.6647828499664126 and parameters: {&#39;lambda_l1&#39;: 6.090100149327966e-05, &#39;lambda_l2&#39;: 0.001735913543238237}. Best is trial 48 with value: 0.66652428517188.
-regularization_factors, val_score: 0.666524:  40%|###############2                      | 8/20 [00:00&lt;00:00, 14.90it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:17,405]</span> Trial 50 finished with value: 0.6647609451210608 and parameters: {&#39;lambda_l1&#39;: 8.460223239138506e-07, &#39;lambda_l2&#39;: 0.00010650527499402383}. Best is trial 48 with value: 0.66652428517188.
-regularization_factors, val_score: 0.666524:  40%|###############2                      | 8/20 [00:00&lt;00:00, 14.90it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:17,472]</span> Trial 51 finished with value: 0.6647682467361781 and parameters: {&#39;lambda_l1&#39;: 0.00016247039617262268, &#39;lambda_l2&#39;: 8.048860722660695e-08}. Best is trial 48 with value: 0.66652428517188.
-regularization_factors, val_score: 0.666524:  45%|#################1                    | 9/20 [00:00&lt;00:00, 14.90it/s]</pre>
+<pre>regularization_factors, val_score: 0.666524:  30%|###########4                          | 6/20 [00:00&lt;00:00, 15.19it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:36,328]</span> Trial 49 finished with value: 0.6647828499664126 and parameters: {&#39;lambda_l1&#39;: 6.090100149327966e-05, &#39;lambda_l2&#39;: 0.001735913543238237}. Best is trial 48 with value: 0.66652428517188.
+regularization_factors, val_score: 0.666524:  40%|###############2                      | 8/20 [00:00&lt;00:00, 15.28it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:36,392]</span> Trial 50 finished with value: 0.6647609451210608 and parameters: {&#39;lambda_l1&#39;: 8.460223239138506e-07, &#39;lambda_l2&#39;: 0.00010650527499402383}. Best is trial 48 with value: 0.66652428517188.
+regularization_factors, val_score: 0.666524:  40%|###############2                      | 8/20 [00:00&lt;00:00, 15.28it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:36,458]</span> Trial 51 finished with value: 0.6647682467361781 and parameters: {&#39;lambda_l1&#39;: 0.00016247039617262268, &#39;lambda_l2&#39;: 8.048860722660695e-08}. Best is trial 48 with value: 0.66652428517188.
+regularization_factors, val_score: 0.666524:  45%|#################1                    | 9/20 [00:00&lt;00:00, 15.28it/s]</pre>
 </div>
 </div>
 
@@ -16084,9 +16106,9 @@ regularization_factors, val_score: 0.666524:  45%|#################1            
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>regularization_factors, val_score: 0.666524:  50%|##################5                  | 10/20 [00:00&lt;00:00, 14.77it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:17,542]</span> Trial 52 finished with value: 0.663578083472064 and parameters: {&#39;lambda_l1&#39;: 2.2161086720496246, &#39;lambda_l2&#39;: 2.8111343314629743e-07}. Best is trial 48 with value: 0.66652428517188.
-regularization_factors, val_score: 0.666524:  50%|##################5                  | 10/20 [00:00&lt;00:00, 14.77it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:17,639]</span> Trial 53 finished with value: 0.6640782441075966 and parameters: {&#39;lambda_l1&#39;: 1.2690427543609078e-08, &#39;lambda_l2&#39;: 4.102040839378375}. Best is trial 48 with value: 0.66652428517188.
-regularization_factors, val_score: 0.666524:  55%|####################3                | 11/20 [00:00&lt;00:00, 14.77it/s]</pre>
+<pre>regularization_factors, val_score: 0.666524:  50%|##################5                  | 10/20 [00:00&lt;00:00, 15.13it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:36,527]</span> Trial 52 finished with value: 0.663578083472064 and parameters: {&#39;lambda_l1&#39;: 2.2161086720496246, &#39;lambda_l2&#39;: 2.8111343314629743e-07}. Best is trial 48 with value: 0.66652428517188.
+regularization_factors, val_score: 0.666524:  50%|##################5                  | 10/20 [00:00&lt;00:00, 15.13it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:36,605]</span> Trial 53 finished with value: 0.6640782441075966 and parameters: {&#39;lambda_l1&#39;: 1.2690427543609078e-08, &#39;lambda_l2&#39;: 4.102040839378375}. Best is trial 48 with value: 0.66652428517188.
+regularization_factors, val_score: 0.666524:  55%|####################3                | 11/20 [00:00&lt;00:00, 15.13it/s]</pre>
 </div>
 </div>
 
@@ -16108,6 +16130,9 @@ regularization_factors, val_score: 0.666524:  55%|####################3         
 [100]	valid_0&#39;s auc: 0.664078
 [20]	valid_0&#39;s auc: 0.666809
 [40]	valid_0&#39;s auc: 0.667656
+[60]	valid_0&#39;s auc: 0.665962
+[80]	valid_0&#39;s auc: 0.663074
+[100]	valid_0&#39;s auc: 0.6664
 </pre>
 </div>
 </div>
@@ -16119,9 +16144,10 @@ regularization_factors, val_score: 0.666524:  55%|####################3         
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>regularization_factors, val_score: 0.666524:  60%|######################2              | 12/20 [00:00&lt;00:00, 13.30it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:17,723]</span> Trial 54 finished with value: 0.6664001577148866 and parameters: {&#39;lambda_l1&#39;: 0.021688085327267428, &#39;lambda_l2&#39;: 0.039855542492191545}. Best is trial 48 with value: 0.66652428517188.
-regularization_factors, val_score: 0.666524:  60%|######################2              | 12/20 [00:00&lt;00:00, 13.30it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:17,803]</span> Trial 55 finished with value: 0.6664585706358247 and parameters: {&#39;lambda_l1&#39;: 0.02200718056423121, &#39;lambda_l2&#39;: 0.06425016475192538}. Best is trial 48 with value: 0.66652428517188.
-regularization_factors, val_score: 0.666524:  65%|########################             | 13/20 [00:00&lt;00:00, 13.30it/s]</pre>
+<pre>regularization_factors, val_score: 0.666524:  60%|######################2              | 12/20 [00:00&lt;00:00, 14.13it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:36,686]</span> Trial 54 finished with value: 0.6664001577148866 and parameters: {&#39;lambda_l1&#39;: 0.021688085327267428, &#39;lambda_l2&#39;: 0.039855542492191545}. Best is trial 48 with value: 0.66652428517188.
+regularization_factors, val_score: 0.666524:  60%|######################2              | 12/20 [00:00&lt;00:00, 14.13it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:36,764]</span> Trial 55 finished with value: 0.6664585706358247 and parameters: {&#39;lambda_l1&#39;: 0.02200718056423121, &#39;lambda_l2&#39;: 0.06425016475192538}. Best is trial 48 with value: 0.66652428517188.
+regularization_factors, val_score: 0.666524:  70%|#########################9           | 14/20 [00:00&lt;00:00, 13.60it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:36,845]</span> Trial 56 finished with value: 0.6664220625602383 and parameters: {&#39;lambda_l1&#39;: 2.0448073846997877e-06, &#39;lambda_l2&#39;: 0.10155131723977613}. Best is trial 48 with value: 0.66652428517188.
+regularization_factors, val_score: 0.666524:  70%|#########################9           | 14/20 [00:00&lt;00:00, 13.60it/s]</pre>
 </div>
 </div>
 
@@ -16132,10 +16158,7 @@ regularization_factors, val_score: 0.666524:  65%|########################      
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[60]	valid_0&#39;s auc: 0.665962
-[80]	valid_0&#39;s auc: 0.663074
-[100]	valid_0&#39;s auc: 0.6664
-[20]	valid_0&#39;s auc: 0.666809
+<pre>[20]	valid_0&#39;s auc: 0.666809
 [40]	valid_0&#39;s auc: 0.667678
 [60]	valid_0&#39;s auc: 0.665999
 [80]	valid_0&#39;s auc: 0.663133
@@ -16144,7 +16167,8 @@ regularization_factors, val_score: 0.666524:  65%|########################      
 [40]	valid_0&#39;s auc: 0.667693
 [60]	valid_0&#39;s auc: 0.666152
 [80]	valid_0&#39;s auc: 0.663257
-[100]	valid_0&#39;s auc: 0.666422</pre>
+[100]	valid_0&#39;s auc: 0.666422
+</pre>
 </div>
 </div>
 
@@ -16155,10 +16179,9 @@ regularization_factors, val_score: 0.666524:  65%|########################      
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>regularization_factors, val_score: 0.666524:  70%|#########################9           | 14/20 [00:01&lt;00:00, 12.98it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:17,885]</span> Trial 56 finished with value: 0.6664220625602383 and parameters: {&#39;lambda_l1&#39;: 2.0448073846997877e-06, &#39;lambda_l2&#39;: 0.10155131723977613}. Best is trial 48 with value: 0.66652428517188.
-regularization_factors, val_score: 0.666524:  70%|#########################9           | 14/20 [00:01&lt;00:00, 12.98it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:17,961]</span> Trial 57 finished with value: 0.6664074593300038 and parameters: {&#39;lambda_l1&#39;: 0.007331795055741075, &#39;lambda_l2&#39;: 0.049169418686482995}. Best is trial 48 with value: 0.66652428517188.
-regularization_factors, val_score: 0.666524:  80%|#############################6       | 16/20 [00:01&lt;00:00, 12.99it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:18,037]</span> Trial 58 finished with value: 0.6621652209468735 and parameters: {&#39;lambda_l1&#39;: 2.073205834915115, &#39;lambda_l2&#39;: 0.516347192223591}. Best is trial 48 with value: 0.66652428517188.
-regularization_factors, val_score: 0.666524:  80%|#############################6       | 16/20 [00:01&lt;00:00, 12.99it/s]</pre>
+<pre>regularization_factors, val_score: 0.666524:  70%|#########################9           | 14/20 [00:01&lt;00:00, 13.60it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:36,924]</span> Trial 57 finished with value: 0.6664074593300038 and parameters: {&#39;lambda_l1&#39;: 0.007331795055741075, &#39;lambda_l2&#39;: 0.049169418686482995}. Best is trial 48 with value: 0.66652428517188.
+regularization_factors, val_score: 0.666524:  80%|#############################6       | 16/20 [00:01&lt;00:00, 13.32it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:37,002]</span> Trial 58 finished with value: 0.6621652209468735 and parameters: {&#39;lambda_l1&#39;: 2.073205834915115, &#39;lambda_l2&#39;: 0.516347192223591}. Best is trial 48 with value: 0.66652428517188.
+regularization_factors, val_score: 0.666524:  80%|#############################6       | 16/20 [00:01&lt;00:00, 13.32it/s]</pre>
 </div>
 </div>
 
@@ -16169,8 +16192,7 @@ regularization_factors, val_score: 0.666524:  80%|#############################6
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>
-[20]	valid_0&#39;s auc: 0.666809
+<pre>[20]	valid_0&#39;s auc: 0.666809
 [40]	valid_0&#39;s auc: 0.667656
 [60]	valid_0&#39;s auc: 0.665911
 [80]	valid_0&#39;s auc: 0.663074
@@ -16181,6 +16203,9 @@ regularization_factors, val_score: 0.666524:  80%|#############################6
 [80]	valid_0&#39;s auc: 0.661566
 [100]	valid_0&#39;s auc: 0.662165
 [20]	valid_0&#39;s auc: 0.666846
+[40]	valid_0&#39;s auc: 0.666214
+[60]	valid_0&#39;s auc: 0.665904
+[80]	valid_0&#39;s auc: 0.662366
 </pre>
 </div>
 </div>
@@ -16192,9 +16217,10 @@ regularization_factors, val_score: 0.666524:  80%|#############################6
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>regularization_factors, val_score: 0.666524:  80%|#############################6       | 16/20 [00:01&lt;00:00, 12.99it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:18,118]</span> Trial 59 finished with value: 0.6648047548117644 and parameters: {&#39;lambda_l1&#39;: 3.503514625943598e-06, &#39;lambda_l2&#39;: 0.0038134370217020536}. Best is trial 48 with value: 0.66652428517188.
-regularization_factors, val_score: 0.666524:  90%|#################################3   | 18/20 [00:01&lt;00:00, 12.87it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:18,197]</span> Trial 60 finished with value: 0.6619096644177692 and parameters: {&#39;lambda_l1&#39;: 0.061601014816687776, &#39;lambda_l2&#39;: 0.3338127972140273}. Best is trial 48 with value: 0.66652428517188.
-regularization_factors, val_score: 0.666524:  90%|#################################3   | 18/20 [00:01&lt;00:00, 12.87it/s]</pre>
+<pre>regularization_factors, val_score: 0.666524:  80%|#############################6       | 16/20 [00:01&lt;00:00, 13.32it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:37,083]</span> Trial 59 finished with value: 0.6648047548117644 and parameters: {&#39;lambda_l1&#39;: 3.503514625943598e-06, &#39;lambda_l2&#39;: 0.0038134370217020536}. Best is trial 48 with value: 0.66652428517188.
+regularization_factors, val_score: 0.666524:  90%|#################################3   | 18/20 [00:01&lt;00:00, 13.04it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:37,162]</span> Trial 60 finished with value: 0.6619096644177692 and parameters: {&#39;lambda_l1&#39;: 0.061601014816687776, &#39;lambda_l2&#39;: 0.3338127972140273}. Best is trial 48 with value: 0.66652428517188.
+regularization_factors, val_score: 0.666524:  90%|#################################3   | 18/20 [00:01&lt;00:00, 13.04it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:37,239]</span> Trial 61 finished with value: 0.6647682467361781 and parameters: {&#39;lambda_l1&#39;: 4.826813123222313e-07, &#39;lambda_l2&#39;: 0.010266764651549508}. Best is trial 48 with value: 0.66652428517188.
+regularization_factors, val_score: 0.666524:  95%|###################################1 | 19/20 [00:01&lt;00:00, 13.04it/s]</pre>
 </div>
 </div>
 
@@ -16205,10 +16231,7 @@ regularization_factors, val_score: 0.666524:  90%|##############################
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[40]	valid_0&#39;s auc: 0.666214
-[60]	valid_0&#39;s auc: 0.665904
-[80]	valid_0&#39;s auc: 0.662366
-[100]	valid_0&#39;s auc: 0.664805
+<pre>[100]	valid_0&#39;s auc: 0.664805
 [20]	valid_0&#39;s auc: 0.663571
 [40]	valid_0&#39;s auc: 0.664516
 [60]	valid_0&#39;s auc: 0.665108
@@ -16218,6 +16241,7 @@ regularization_factors, val_score: 0.666524:  90%|##############################
 [40]	valid_0&#39;s auc: 0.666199
 [60]	valid_0&#39;s auc: 0.665933
 [80]	valid_0&#39;s auc: 0.662439
+[100]	valid_0&#39;s auc: 0.664768
 </pre>
 </div>
 </div>
@@ -16229,11 +16253,11 @@ regularization_factors, val_score: 0.666524:  90%|##############################
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>regularization_factors, val_score: 0.666524:  90%|#################################3   | 18/20 [00:01&lt;00:00, 12.87it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:18,278]</span> Trial 61 finished with value: 0.6647682467361781 and parameters: {&#39;lambda_l1&#39;: 4.826813123222313e-07, &#39;lambda_l2&#39;: 0.010266764651549508}. Best is trial 48 with value: 0.66652428517188.
-regularization_factors, val_score: 0.666524: 100%|#####################################| 20/20 [00:01&lt;00:00, 12.77it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:18,355]</span> Trial 62 finished with value: 0.6664220625602383 and parameters: {&#39;lambda_l1&#39;: 0.003594641671611667, &#39;lambda_l2&#39;: 8.032696173162027}. Best is trial 48 with value: 0.66652428517188.
-regularization_factors, val_score: 0.666524: 100%|#####################################| 20/20 [00:01&lt;00:00, 13.43it/s]
-min_data_in_leaf, val_score: 0.667240:   0%|                                                     | 0/5 [00:00&lt;?, ?it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:18,430]</span> Trial 63 finished with value: 0.6672398434533718 and parameters: {&#39;min_child_samples&#39;: 5}. Best is trial 63 with value: 0.6672398434533718.
-min_data_in_leaf, val_score: 0.667240:  20%|#########                                    | 1/5 [00:00&lt;00:00, 13.74it/s]</pre>
+<pre>regularization_factors, val_score: 0.666524: 100%|#####################################| 20/20 [00:01&lt;00:00, 12.93it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:37,320]</span> Trial 62 finished with value: 0.6664220625602383 and parameters: {&#39;lambda_l1&#39;: 0.003594641671611667, &#39;lambda_l2&#39;: 8.032696173162027}. Best is trial 48 with value: 0.66652428517188.
+regularization_factors, val_score: 0.666524: 100%|#####################################| 20/20 [00:01&lt;00:00, 13.72it/s]
+min_data_in_leaf, val_score: 0.666524:   0%|                                                     | 0/5 [00:00&lt;?, ?it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:37,398]</span> Trial 63 finished with value: 0.655484243114577 and parameters: {&#39;min_child_samples&#39;: 100}. Best is trial 63 with value: 0.655484243114577.
+min_data_in_leaf, val_score: 0.666524:  40%|##################                           | 2/5 [00:00&lt;00:00, 14.64it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:37,463]</span> Trial 64 finished with value: 0.663537924588919 and parameters: {&#39;min_child_samples&#39;: 50}. Best is trial 64 with value: 0.663537924588919.
+min_data_in_leaf, val_score: 0.666524:  40%|##################                           | 2/5 [00:00&lt;00:00, 14.64it/s]</pre>
 </div>
 </div>
 
@@ -16244,18 +16268,21 @@ min_data_in_leaf, val_score: 0.667240:  20%|#########                           
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[100]	valid_0&#39;s auc: 0.664768
-[20]	valid_0&#39;s auc: 0.64075
+<pre>[20]	valid_0&#39;s auc: 0.64075
 [40]	valid_0&#39;s auc: 0.657799
 [60]	valid_0&#39;s auc: 0.664787
 [80]	valid_0&#39;s auc: 0.667189
 [100]	valid_0&#39;s auc: 0.666422
-[20]	valid_0&#39;s auc: 0.664319
-[40]	valid_0&#39;s auc: 0.66739
-[60]	valid_0&#39;s auc: 0.668357
-[80]	valid_0&#39;s auc: 0.666919
-[100]	valid_0&#39;s auc: 0.66724
+[20]	valid_0&#39;s auc: 0.642564
+[40]	valid_0&#39;s auc: 0.649844
+[60]	valid_0&#39;s auc: 0.648953
+[80]	valid_0&#39;s auc: 0.653841
+[100]	valid_0&#39;s auc: 0.655484
 [20]	valid_0&#39;s auc: 0.650019
+[40]	valid_0&#39;s auc: 0.662727
+[60]	valid_0&#39;s auc: 0.663049
+[80]	valid_0&#39;s auc: 0.662392
+[100]	valid_0&#39;s auc: 0.663538
 </pre>
 </div>
 </div>
@@ -16267,10 +16294,10 @@ min_data_in_leaf, val_score: 0.667240:  20%|#########                           
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>min_data_in_leaf, val_score: 0.667240:  40%|##################                           | 2/5 [00:00&lt;00:00, 15.08it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:18,496]</span> Trial 64 finished with value: 0.663537924588919 and parameters: {&#39;min_child_samples&#39;: 50}. Best is trial 63 with value: 0.6672398434533718.
-min_data_in_leaf, val_score: 0.667240:  40%|##################                           | 2/5 [00:00&lt;00:00, 15.08it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:18,559]</span> Trial 65 finished with value: 0.66652428517188 and parameters: {&#39;min_child_samples&#39;: 25}. Best is trial 63 with value: 0.6672398434533718.
-min_data_in_leaf, val_score: 0.667240:  80%|####################################         | 4/5 [00:00&lt;00:00, 15.35it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:18,623]</span> Trial 66 finished with value: 0.6672398434533718 and parameters: {&#39;min_child_samples&#39;: 10}. Best is trial 63 with value: 0.6672398434533718.
-min_data_in_leaf, val_score: 0.667240:  80%|####################################         | 4/5 [00:00&lt;00:00, 15.35it/s]</pre>
+<pre>min_data_in_leaf, val_score: 0.667240:  40%|##################                           | 2/5 [00:00&lt;00:00, 14.64it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:37,529]</span> Trial 65 finished with value: 0.6672398434533718 and parameters: {&#39;min_child_samples&#39;: 10}. Best is trial 65 with value: 0.6672398434533718.
+min_data_in_leaf, val_score: 0.667240:  80%|####################################         | 4/5 [00:00&lt;00:00, 14.89it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:37,596]</span> Trial 66 finished with value: 0.66652428517188 and parameters: {&#39;min_child_samples&#39;: 25}. Best is trial 65 with value: 0.6672398434533718.
+min_data_in_leaf, val_score: 0.667240:  80%|####################################         | 4/5 [00:00&lt;00:00, 14.89it/s]<span class="ansi-green-fg">[I 2023-02-20 16:20:37,661]</span> Trial 67 finished with value: 0.6672398434533718 and parameters: {&#39;min_child_samples&#39;: 5}. Best is trial 65 with value: 0.6672398434533718.
+min_data_in_leaf, val_score: 0.667240: 100%|#############################################| 5/5 [00:00&lt;00:00, 14.79it/s]</pre>
 </div>
 </div>
 
@@ -16281,10 +16308,11 @@ min_data_in_leaf, val_score: 0.667240:  80%|####################################
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[40]	valid_0&#39;s auc: 0.662727
-[60]	valid_0&#39;s auc: 0.663049
-[80]	valid_0&#39;s auc: 0.662392
-[100]	valid_0&#39;s auc: 0.663538
+<pre>[20]	valid_0&#39;s auc: 0.664319
+[40]	valid_0&#39;s auc: 0.66739
+[60]	valid_0&#39;s auc: 0.668357
+[80]	valid_0&#39;s auc: 0.666919
+[100]	valid_0&#39;s auc: 0.66724
 [20]	valid_0&#39;s auc: 0.664319
 [40]	valid_0&#39;s auc: 0.66739
 [60]	valid_0&#39;s auc: 0.668357
@@ -16295,34 +16323,6 @@ min_data_in_leaf, val_score: 0.667240:  80%|####################################
 [60]	valid_0&#39;s auc: 0.668357
 [80]	valid_0&#39;s auc: 0.666919
 [100]	valid_0&#39;s auc: 0.66724
-[20]	valid_0&#39;s auc: 0.642564
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>min_data_in_leaf, val_score: 0.667240:  80%|####################################         | 4/5 [00:00&lt;00:00, 15.35it/s]<span class="ansi-green-fg">[I 2023-01-12 19:19:18,688]</span> Trial 67 finished with value: 0.655484243114577 and parameters: {&#39;min_child_samples&#39;: 100}. Best is trial 63 with value: 0.6672398434533718.
-min_data_in_leaf, val_score: 0.667240: 100%|#############################################| 5/5 [00:00&lt;00:00, 15.15it/s]</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[40]	valid_0&#39;s auc: 0.649844
-[60]	valid_0&#39;s auc: 0.648953
-[80]	valid_0&#39;s auc: 0.653841
-[100]	valid_0&#39;s auc: 0.655484
 </pre>
 </div>
 </div>
@@ -16383,7 +16383,7 @@ min_data_in_leaf, val_score: 0.667240: 100%|####################################
  &#39;feature_fraction&#39;: 0.6799999999999999,
  &#39;bagging_fraction&#39;: 0.6807182826316669,
  &#39;bagging_freq&#39;: 1,
- &#39;min_child_samples&#39;: 5,
+ &#39;min_child_samples&#39;: 10,
  &#39;num_iterations&#39;: 100,
  &#39;early_stopping_round&#39;: None}</pre>
 </div>
@@ -16414,7 +16414,6 @@ min_data_in_leaf, val_score: 0.667240: 100%|####################################
 <span class="n">lgbc_clf</span> <span class="o">=</span> <span class="n">lgb</span><span class="o">.</span><span class="n">train</span><span class="p">(</span>
     <span class="n">best_lgbc_params</span><span class="p">,</span> <span class="c1"># 最適なハイパーパラメータ</span>
     <span class="n">train_set</span><span class="o">=</span><span class="n">lgb_train_train_dataset</span><span class="p">,</span> <span class="c1"># 学習データ</span>
-    <span class="c1"># valid_sets=lgb_valid_dataset, # 検証データ</span>
     <span class="n">num_boost_round</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="c1"># boostingを行う回数</span>
     <span class="n">verbose_eval</span><span class="o">=</span><span class="mi">20</span> <span class="c1"># ブースティング20回につき1回結果を出力</span>
 <span class="p">)</span>
@@ -16515,8 +16514,8 @@ min_data_in_leaf, val_score: 0.667240: 100%|####################################
 <span class="n">lgbc_train_valid_pred_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">lgbc_train_valid_proba_y</span> <span class="o">&gt;=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 
 <span class="c1"># train-validを検証する（Accuracyを算出する）</span>
-<span class="n">lgbc_train_train_accuracy_val</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">dtc_train_valid_df</span><span class="p">[</span><span class="n">target</span><span class="p">],</span> <span class="n">lgbc_train_valid_pred_y</span><span class="p">)</span>
-<span class="n">lgbc_train_train_accuracy_val</span>
+<span class="n">lgbc_train_valid_accuracy_val</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">dtc_train_valid_df</span><span class="p">[</span><span class="n">target</span><span class="p">],</span> <span class="n">lgbc_train_valid_pred_y</span><span class="p">)</span>
+<span class="n">lgbc_train_valid_accuracy_val</span>
 </pre></div>
 
      </div>

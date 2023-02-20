@@ -17058,9 +17058,7 @@ Name: customer_id, Length: 3312, dtype: object</pre>
 <span class="n">pp_gi_test_df_et1</span> <span class="o">=</span> <span class="n">gi_test_df</span><span class="p">[</span><span class="n">gi_test_df</span><span class="p">[</span><span class="s2">&quot;event_type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span>
 <span class="n">pp_gi_test_df_et2</span> <span class="o">=</span> <span class="n">gi_test_df</span><span class="p">[</span><span class="n">gi_test_df</span><span class="p">[</span><span class="s2">&quot;event_type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">]</span>
 <span class="n">pp_gi_test_df_et3</span> <span class="o">=</span> <span class="n">gi_test_df</span><span class="p">[</span><span class="n">gi_test_df</span><span class="p">[</span><span class="s2">&quot;event_type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">3</span><span class="p">]</span>
-
 <span class="n">output_df</span> <span class="o">=</span> <span class="n">pp_gi_test_df_et1</span><span class="p">[[</span><span class="s2">&quot;customer_id&quot;</span><span class="p">,</span> <span class="s2">&quot;event_day&quot;</span><span class="p">,</span> <span class="s2">&quot;gender&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="s2">&quot;time_duration&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-
 <span class="c1"># ダミー変数化</span>
 <span class="n">output_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">output_df</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">cate_cols</span><span class="p">)</span>
 <span class="n">output_df</span>
@@ -18566,7 +18564,7 @@ Name: customer_id, Length: 3312, dtype: object</pre>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 出力するpickleのファイルパスを設定</span>
-<span class="n">pp_data_dict_pkl_fpath</span> <span class="o">=</span> <span class="s2">&quot;../intermediate/pp_data_dict.pkl3&quot;</span>
+<span class="n">pp_data_dict_pkl_fpath</span> <span class="o">=</span> <span class="s2">&quot;../intermediate/pp_data_dict_pkl.pkl3&quot;</span>
 <span class="c1"># joblibを使用して, pickleファイルを出力する</span>
 <span class="kn">import</span> <span class="nn">joblib</span>
 <span class="n">joblib</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">pp_data_dict</span><span class="p">,</span> <span class="n">pp_data_dict_pkl_fpath</span><span class="p">,</span> <span class="n">compress</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
@@ -18591,7 +18589,7 @@ Name: customer_id, Length: 3312, dtype: object</pre>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>[&#39;../intermediate/pp_data_dict.pkl3&#39;]</pre>
+<pre>[&#39;../intermediate/pp_data_dict_pkl.pkl3&#39;]</pre>
 </div>
 
 </div>
